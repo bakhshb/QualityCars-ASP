@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MangerMaster.master.cs" Inherits="Manager_MangerMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title><asp:ContentPlaceHolder runat="server" ID="PageTitle"></asp:ContentPlaceHolder></title>
+    <asp:ContentPlaceHolder runat="server" ID="PageHeader"></asp:ContentPlaceHolder>
+	<link href="../Style/style.css" rel="stylesheet" type="text/css" />
+    <link href="../images/tab-logo.png" rel="Shortcut Icon" type="image/png" />
+</head>
+<body>
+<form id="form1" runat="server">
+  <div id="wrapper">
+      <div id="inner">
+          <div id="header">
+              <h1><img src="../images/logo.gif" width="519" height="63" alt="Online Store" /></h1>
+              <div id="nav">
+                  <a href="../Default.aspx"> Home</a><asp:LinkButton ID="lnkBtnManagement" runat="server" CausesValidation="false" onclick="lnkBtnManagement_Click">| Managemnet</asp:LinkButton> | <asp:Label runat="server" ID="lblLogin"  Text=""></asp:Label><asp:LinkButton ID="lnkBtnLogin" runat="server" CausesValidation="false" onclick="lnkBtnLogin_Click">Login</asp:LinkButton>
+              </div><!-- end nav -->
+              <a href=#" ><img src="../images/header.jpg" width="1000px" height="193" alt="Harry Potter cd" /></a>
+          </div><!-- end header -->
+          <dl id="browse">
+              <dt>Full Management Lists</dt>
+              <dd class="first"><a href="../Default.aspx">Home</a></dd>
+              <dd ><a href="ModifySupplier.aspx">Modify Supplier</a></dd>
+              <dd ><a href="ModifyCarMake.aspx">Modify Car Make</a></dd>
+              <dd><a href="ModifyCarModel.aspx">Modify Car Model</a></dd>
+              <dd><a href="ModifyCustomer.aspx">Modify Customer</a></dd>
+              <dd><a href="SearchCustomer.aspx" target="_top">Search Customer</a></dd>
+              <dd><a href="DisabledAccount.aspx" target="_top">Disabled Account</a></dd>
+              <dd><a href="Order.aspx" target="_top">Modify Order</a></dd>
+              <dd><a href="AddCarMake.aspx">Add Car Make</a></dd>
+              <dd ><a href="AddSupplier.aspx">Add Supplier</a></dd>
+              <dd class="last"><a href="AddCarModel.aspx">Add Car Model</a></dd>
+          </dl>
+          <div id="body">
+              <div class="inner">
+              <asp:ContentPlaceHolder runat="server" ID="MainContent"></asp:ContentPlaceHolder>
+                  <div class="clear"></div>
+              </div><!-- end .inner -->
+          </div><!-- end body -->
+          
+          <div class="clear"></div>
+          <div id="footer">
+              &copy; CopyRight 2014
+              
+              &nbsp;
+              <div id="footnav">
+                  <a href="#">Legal</a> | <a href="#">Privacy Policy</a>
+              </div><!-- end footnav -->
+              
+          </div><!-- end footer -->
+      </div><!-- end inner -->
+  </div><!-- end wrapper -->
+  </form>
+</body>
+</html>
